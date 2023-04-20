@@ -1,0 +1,15 @@
+name: exerciceMessage
+
+on:
+  push:
+    branches: [ main ]
+
+env:
+  MESSAGE: "Ceci est une variable d'environnement"
+
+jobs:
+  display_env:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Display environment variable
+      run: echo $MESSAGE
